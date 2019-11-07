@@ -4,17 +4,5 @@
   </mat-card-content>
 </mat-card>
 <div class="buttons">
-  <button mat-raised-button
-          color="primary"
-          class="first-choice"
-          (click)="buttonClicked(1)"
-          *ngIf="lore.firstChoiceRedirectsTo">Option 1</button>
-  <button mat-raised-button
-          color="primary"
-          (click)="buttonClicked(2)"
-          *ngIf="lore.firstChoiceRedirectsTo">Option 2</button>
-  <button mat-raised-button
-          color="primary"
-          (click)="buttonClicked(0)"
-          *ngIf="!lore.firstChoiceRedirectsTo">Rejouer</button>
+  <app-buttons [lore]="lore" (clickChoice)="buttonClicked($event)"></app-buttons>
 </div>

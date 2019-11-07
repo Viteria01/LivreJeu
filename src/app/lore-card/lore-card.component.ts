@@ -18,7 +18,7 @@ export class LoreCardComponent implements OnInit {
   }
 
   buttonClicked(button: number) {
-    this.loreService.findLoreForChoice(this.lore, button).subscribe(lore => {
+    this.loreService.findLoreForChoice(button).subscribe(lore => {
       this.lore = lore;
     });
   }

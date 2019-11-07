@@ -9,6 +9,7 @@ import {MatButtonModule, MatCardModule, MatToolbarModule} from '@angular/materia
 import {FormsModule} from '@angular/forms';
 import { GameComponent } from './game/game.component';
 import {HttpClientModule} from '@angular/common/http';
+import { ButtonsComponent } from './buttons/buttons.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import {HttpClientModule} from '@angular/common/http';
     LoreCardComponent,
     HeaderComponent,
     GameComponent,
+    ButtonsComponent,
   ],
   imports: [
     BrowserModule,

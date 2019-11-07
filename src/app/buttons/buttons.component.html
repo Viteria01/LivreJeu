@@ -1,0 +1,13 @@
+<ng-container *ngIf="lore && lore.listOfChoices.length > 0">
+  <button *ngFor="let choice of lore.listOfChoices"
+          mat-raised-button
+          color="primary"
+          class="first-choice"
+          (click)="clickChoice.emit(choice.page)">{{choice.label}}</button>
+</ng-container>
+<ng-container *ngIf="lore && lore.listOfChoices.length === 0">
+  <button mat-raised-button
+          color="primary"
+          class="first-choice"
+          (click)="clickChoice.emit(1)">Rejouer</button>
+</ng-container>

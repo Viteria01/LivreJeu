@@ -17,12 +17,11 @@ export class LoreService {
     return of(lores[0]);
   }
 
-  findLoreForChoice(lore: Lore, choice: number): Observable<Lore> {
+  findLoreForChoice(choice: number): Observable<Lore> {
     if (choice === 0) {
       return this.getInitialLore();
     } else {
-      const wantedPage = choice === 1 ? lore.firstChoiceRedirectsTo : lore.secondChoiceRedirectsTo;
-      return of(lores.find(innerLore => innerLore.page === wantedPage));
+      return of(lores.find(innerLore => innerLore.page === choice));
     }
   }
 }
