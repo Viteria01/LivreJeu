@@ -5,17 +5,30 @@
     "listOfChoices": [
       {
         "page": 2,
-        "label": "Porte"
+        "label": "Porte",
+        "items": [
+          {
+            "id": 1,
+            "label": "key"
+          },
+          {
+            "id": 2,
+            "label": "skull"
+          }
+        ]
       },
       {
         "page": 3,
-        "label": "Trappe"
+        "label": "Trappe",
+        "items": []
       },
       {
         "page": 4,
-        "label": "Mourir"
+        "label": "Mourir",
+        "items": []
       }
-    ]
+    ],
+    "items": []
   },
   {
     "page": 2,
@@ -23,13 +36,16 @@
     "listOfChoices": [
       {
         "page": 1,
-        "label": "Retour"
+        "label": "Retour",
+        "items": []
       },
       {
         "page": 4,
-        "label": "Boire"
+        "label": "Boire",
+        "items": []
       }
-    ]
+    ],
+    "items": []
   },
   {
     "page": 3,
@@ -37,11 +53,23 @@
     "listOfChoices": [
       {
         "page": 1,
-        "label": "Retour"
+        "label": "Retour",
+        "items": []
       },
       {
         "page": 5,
-        "label": "Lire"
+        "label": "Lire",
+        "items": []
+      }
+    ],
+    "items": [
+      {
+        "id": 1,
+        "label": "key"
+      },
+      {
+        "id": 2,
+        "label": "skull"
       }
     ]
   },
@@ -49,14 +77,14 @@
     "page": 4,
     "content": "Vous buvez le liquide douteux, et tombez immédiatement. Vous êtes mort.",
     "listOfChoices": [
-
-    ]
+    ],
+    "items": []
   },
   {
     "page": 5,
     "content": "Vous lisez le livre à voix haute. Une sensation de bien-être vous envahis. Vous vous réveillez par la suite dans votre lit. Ouf, tout ceci n'était qu'un rêve.",
     "listOfChoices": [
-
-    ]
+    ],
+    "items": []
   }
 ]

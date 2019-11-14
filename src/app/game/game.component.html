@@ -1,3 +1,7 @@
-<app-lore-card *ngIf="initialLore" [lore]="initialLore">
+<div class="inventory">
+  <app-inventory [inventory]="this.player.inventory"></app-inventory>
+</div>
+<app-lore-card *ngIf="lore" [lore]="lore" (clickChoice)="buttonClicked($event)">
 
 </app-lore-card>
+

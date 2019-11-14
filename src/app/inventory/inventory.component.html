@@ -1,0 +1,10 @@
+<h1 class="title">Inventaire : </h1>
+<button *ngFor="let item of inventory.items"
+        mat-raised-button
+        color="primary"
+        disabled
+        class="item">{{item.label}}</button>
+
+<p *ngIf="inventory.items.length === 0">Empty inventory...</p>
+
+

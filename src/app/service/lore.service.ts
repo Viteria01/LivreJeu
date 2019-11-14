@@ -4,6 +4,7 @@ import {HttpClient} from '@angular/common/http';
 import {Observable, of, ReplaySubject} from 'rxjs';
 // @ts-ignore
 import lores from '../../assets/lores.json';
+import {Player} from '../entities/Player';
 
 @Injectable({
   providedIn: 'root'
@@ -14,14 +15,14 @@ export class LoreService {
   }
 
   getInitialLore(): Observable<Lore> {
-    return of(lores[0]);
+    return of(lores[0] as Lore);
   }
 
   findLoreForChoice(choice: number): Observable<Lore> {
     if (choice === 0) {
-      return this.getInitialLore();
+      return of(null);
     } else {
-      return of(lores.find(innerLore => innerLore.page === choice));
+      return of(lores.find(innerLore => innerLore.page === choice) as Lore);
     }
   }
 }

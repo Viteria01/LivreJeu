@@ -5,11 +5,12 @@ import { AppComponent } from './app.component';
 import { LoreCardComponent } from './lore-card/lore-card.component';
 import { HeaderComponent } from './header/header.component';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
-import {MatButtonModule, MatCardModule, MatToolbarModule} from '@angular/material';
+import {MatButtonModule, MatCardModule, MatSnackBarModule, MatToolbarModule} from '@angular/material';
 import {FormsModule} from '@angular/forms';
 import { GameComponent } from './game/game.component';
 import {HttpClientModule} from '@angular/common/http';
 import { ButtonsComponent } from './buttons/buttons.component';
+import { InventoryComponent } from './inventory/inventory.component';
 
 @NgModule({
   declarations: [
@@ -18,12 +19,14 @@ import { ButtonsComponent } from './buttons/buttons.component';
     HeaderComponent,
     GameComponent,
     ButtonsComponent,
+    InventoryComponent,
   ],
   imports: [
     BrowserModule,
     NoopAnimationsModule,
     MatToolbarModule,
     MatCardModule,
+    MatSnackBarModule,
     MatButtonModule,
     FormsModule,
     HttpClientModule

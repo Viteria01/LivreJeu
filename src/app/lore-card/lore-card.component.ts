@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {Lore} from '../entities/Lore';
 import {LoreService} from '../service/lore.service';
 
@@ -10,7 +10,8 @@ import {LoreService} from '../service/lore.service';
 export class LoreCardComponent implements OnInit {
   @Input()
   lore: Lore;
-
+  @Output()
+  clickChoice = new EventEmitter();
   constructor(public loreService: LoreService) {
   }
 
@@ -18,9 +19,7 @@ export class LoreCardComponent implements OnInit {
   }
 
   buttonClicked(button: number) {
-    this.loreService.findLoreForChoice(button).subscribe(lore => {
-      this.lore = lore;
-    });
+    this.clickChoice.emit(button);
   }
 
 }
